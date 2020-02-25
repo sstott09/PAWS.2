@@ -10,6 +10,7 @@
 //             { id: uuid(), name: 'Harness'},
 //             { id: uuid(), name: 'Bedding'},
 //             { id: uuid(), name: 'Dog Bowl'},
+//             { id: uuid(), name: 'Dog Food'},
 //         ]
 //     }
 
@@ -24,7 +25,7 @@
 //                         const name = prompt ('Enter Item');
 //                         if(name) {
 //                             this.setState(state => ({
-//                                 items: [...state.items, { id: uuid(), name }]
+//                                 items: [...state.items, { id: uuid(), name: name }]
 //                             }));
 //                         }
 //                     }}

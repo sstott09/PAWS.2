@@ -2,20 +2,17 @@ import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
+import { connect } from 'react-redux';
+import { getItems } from '../actions/itemActions';
+import PropTypes from 'prop-types';
 
 class StarterKit extends Component {
-    state = {
-        items: [
-            { id: uuid(), name: 'Leash' },
-            { id: uuid(), name: 'Harness' },
-            { id: uuid(), name: 'Bedding' },
-            { id: uuid(), name: 'Dog Bowl' },
-            { id: uuid(), name: 'Toys' }
-        ]
+    componentDidMount () {
+        this.props.getItems();
     }
 
     render() {
-        const { items } = this.state;
+        const { items } = this.props.item;
         return (
             <Container>
                 <Button
@@ -29,7 +26,8 @@ class StarterKit extends Component {
                             }));
                         }
                     }}
-                >Add Item</Button>
+                >Add Item
+                </Button>
 
                 <ListGroup>
                     <TransitionGroup className="Starter-Kit">
@@ -57,4 +55,13 @@ class StarterKit extends Component {
     }
 }
 
-export default StarterKit;
+StarterKit.propTypes = {
+    getItems: PropTypes.func.isRequired,
+    item: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    item: state.item
+});
+
+export default connect(mapStateToProps, { getItems })(StarterKit);

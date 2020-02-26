@@ -20,14 +20,14 @@ class StarterKit extends Component {
             <Container>
                 <ListGroup>
                     <TransitionGroup className="Starter-Kit">
-                        {items.map(({ id, name }) => (
-                            <CSSTransition key={id} timeout={500} classNames="fade">
+                        {items.map(({ _id, name }) => (
+                            <CSSTransition key={_id} timeout={500} classNames="fade">
                                 <ListGroupItem>
                                     <Button
                                         className="remove-btn"
                                         color="danger"
                                         size="sm"
-                                        onClick={this.onDeleteclick.bind(this, id)}
+                                        onClick={this.onDeleteclick.bind(this, _id)}
                                     >
                                         &times;
                                     </Button>

@@ -60,14 +60,14 @@ class ItemModal extends Component {
             }>
                 <ModalHeader toggle={
                     this.toggle
-                }>Add To Starter Kit</ModalHeader>
+                }>Add To New Adopter Checklist</ModalHeader>
                 <ModalBody>
                     <Form onSubmit={
                         this.onSubmit
                     }>
                         <FormGroup>
                             <Label for="item">Item</Label>
-                            <Input type="text" name="name" id="item" placeholder="Add Starter Kit Item"
+                            <Input type="text" name="name" id="item" placeholder="Add Checklist Item"
                                 onChange={
                                     this.onChange
                                 }/>

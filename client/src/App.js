@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import AppNavbar from './components/AppNavbar';
-import StarterKit from './components/StarterKit';
+import Checklist from './components/Checklist';
 import ItemModal from './components/ItemModal';
 import {Container} from 'reactstrap';
 
@@ -17,7 +17,7 @@ class App extends Component {
                 <AppNavbar/>
                 <Container>
                     <ItemModal/>
-                    <StarterKit/>
+                    <Checklist/>
                 </Container>
             </div>
         </Provider>);

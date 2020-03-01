@@ -4,30 +4,30 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
-import { Card, CardImg } from 'reactstrap';
-import { Nav, NavLink } from 'reactstrap';
+// import { Card, CardImg } from 'reactstrap';
+// import { Nav, NavLink } from 'reactstrap';
   
-  const Logo = (props) => {
-    return (
-      <div>
-        <Card>
-          <CardImg top width="100%" src="../media/paws-logo.png" alt="Card image cap" />
-        </Card>
-      </div>
-    );
-  };
+  // const Logo = (props) => {
+  //   return (
+  //     <div>
+  //       <Card>
+  //         <CardImg top width="100%" src="../media/paws-logo.png" alt="Card image cap" />
+  //       </Card>
+  //     </div>
+  //   );
+  // };
 
-  const ChecklistLink = (props) => {
-    return (
-      <div>
-        <hr />
-        <p>Checklist for New Adopters</p>
-        <Nav>
-          <NavLink href="https://www.petfinder.com/pet-adoption/dog-adoption/pet-adoption-checklist/">Link</NavLink>
-        </Nav>
-      </div>
-    );
-  }
+  // const ChecklistLink = (props) => {
+  //   return (
+  //     <div>
+  //       <hr />
+  //       <p>Checklist for New Adopters</p>
+  //       <Nav>
+  //         <NavLink href="https://www.petfinder.com/pet-adoption/dog-adoption/pet-adoption-checklist/">Link</NavLink>
+  //       </Nav>
+  //     </div>
+  //   );
+  // }
   
 class Checklist extends Component {
     componentDidMount() {
@@ -65,6 +65,7 @@ class Checklist extends Component {
 }
 
 const mapStateToProps = (state) => ({item: state.item});
+// const mapDispatchToProps ;
 
-export default connect(mapStateToProps, {getItems, deleteItem})(Checklist)(Logo)(ChecklistLink);
+export default connect(mapStateToProps, {getItems, deleteItem})(Checklist);
 

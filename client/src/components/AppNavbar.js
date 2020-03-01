@@ -36,7 +36,7 @@ class AppNavbar extends Component {
                         <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink href="http://paws.wtf/">
-                                    Home
+                                    PAWS Home
                                 </NavLink>
                             </NavItem>
                         </Nav>
